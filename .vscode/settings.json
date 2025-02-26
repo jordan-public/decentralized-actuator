@@ -1,8 +1,10 @@
 {
-    "cSpell.words": [
-        "Bufficon",
-        "incentivized",
-        "racle",
-        "trustlessly"
-    ]
+  "cSpell.words": [
+    "Bufficon",
+    "incentivized",
+    "racle",
+    "trustlessly"
+  ],
+  "solidity.packageDefaultDependenciesContractsDirectory": "src",
+  "solidity.packageDefaultDependenciesDirectory": "lib"
 }
