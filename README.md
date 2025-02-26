@@ -1,6 +1,6 @@
 # decentralized-actuator
 
-# Decentralized Actuator for Real World AI Agents
+# Do-racle: Decentralized Trustless Universal Actuator for Real World AI Agents
 
 ## Abstract
 
