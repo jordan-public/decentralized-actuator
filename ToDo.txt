@@ -1,0 +1,17 @@
+To do:
+- Create the Solidity contracts based on the description we designed. 
+- Create Solidity tests.
+- Create contract deployment scripts that contain sample execution.
+- Create front end for taking tasks, and executing them.
+- Add voting to contracts (time permitting).
+- Add voting front end (time permitting).
+- Add "not to do" items below in "future work section of README.md".
+- Create LangChain plugin for Actuator Do-racle interface.
+- Create demo video.
+- Deploy to multiple EVM blockchains.
+- Apply for sponsor prizes. Prepare to pitch to non-sponsors and non-eligible sponsors as well.
+- Create sample AI Agent (time permitting).
+
+Not to do (for hackathon prototype):
+- Protocol ownership tokens.
+- Token distribution to voters.
