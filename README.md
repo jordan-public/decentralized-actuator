@@ -20,7 +20,13 @@ This is a decentralized economically incentivized on-chain actuator that can be 
 
 ![OptimisticOracleDiagram](./OptimisticOracleDiagram.jpg)
 
-*** Highlighting the difference*** The main difference between an orcale and an optimistic oracle is the number of actors at each stage. In oracle many actors enter data and the outliers who's data is not within the median are "punished". This is optimised to be fast as their typically is no voting period. Alternatively in optimistic oracles one actor enters a binary result, there is no continuous pricing, and then there is a dispute period where any one person can challenge the entry. If disputed there is voting regarding the challenege.
+*** Highlighting the difference*** The main difference between an orcale and an optimistic oracle is the number of actors at each stage. In oracle many actors enter quantifiable data and the outliers are penalized. This is optimised to be fast as their typically is no voting period. Alternatively in optimistic oracles one actor enters a binary data, there is no continuous pricing or quantiability. There is a dispute period where any one person can challenge the entry. If disputed there is voting regarding this challenege of accuracy.
+
+| Oracle            | Quantifiable Data |
+|-------------------|-------------------|
+| Optimistic Oracle | Boolean Data      |
+|-------------------|-------------------|
+| DO-racle          | Boolean Action    |
 
 ### Actuators
 
@@ -40,23 +46,23 @@ What if the AI Agent has to act remotely, and advertize a request for anyone to 
 
 Example: A fictitious pet, called Bufficon has to be fed regularly, and an AI Agent can be put in charge to make sure the Bufficon is fed. The Bufficon owner has to go out of town and put the AI Agent up to this task. The AI Agent can use Oracles to read the status (mood, hunger) of the Bufficon, but it needs an Actuator in order to perform the feeding. As such Actuator does not exist, it would be useful to be able to ask a volunteer to feed the Bufficon and receive a reward for it. Such volunteer would be hard to find, as there is no standard protocol of incentivization and trusted reward for the action.
 
-## Solution: Do-racle Protocol
+## Solution: DO-racle Protocol
 
-We named it ***"Do-racle"*** to hint to the opposite action of Oracle, which acts as Sensor. Do-racle acts as Actuator.
+We named it ***"DO-racle"*** to hint to the opposite action of Oracle, which acts as Sensor. DO-racle acts as Actuator.
 
-The Do-racle Protocol is a standardized ***economically incentivized*** protocol for performing Decentralized Real World actions, while assuring the following:
+The DO-racle Protocol is a standardized ***economically incentivized*** protocol for performing Decentralized Real World actions, while assuring the following:
 -  The actions can be trustlessly requested by anyone (***Requester***) who creates an ***Action Description***, and deposits ***Reward*** for the completion of the desired ***Action***.
 - Anyone (***Actor***) can pick up an advertized Action Description and take responsibility for the task (Action) by depositing ***Guarantee*** funds as stated in the Action Description. The Guarantee funds are lost to the requester and the protocol (shared) of the Action is not performed as described (quality, timeliness). If the Action is performed as requested, the Actor shall receive the Reward deposited by the Requester.
-- To decide whether the action has been performed as requested, the Do-racle Protocol has components similar to the Optimistic Oracle protocols, in which stakeholders (Token Holders) of the Do-racle protocol vote for the correctness decision and receive reward for the voting. To allow this, the action has a ***Dispute Period*** specified in its description as well as ***Voting Period***, which acts as a deadline for the voters.
+- To decide whether the action has been performed as requested, the Do-racle Protocol has components similar to the Optimistic Oracle protocols, in which stakeholders (Token Holders) of the DO-racle protocol vote for the correctness decision and receive reward for the voting. To allow this, the action has a ***Dispute Period*** specified in its description as well as ***Voting Period***, which acts as a deadline for the voters.
 
 ![DoRacleDiagram](./DoRacleDiagram.jpg)
 
 ## Implementation
 
-Do-racle protocol is implemented as a collection of smart contracts written in Solidity, which execute on any EVM. There is also a rudimentary user interface for showing advertized Action Descriptions as well as voting on the correctness on the Action completions.
+DO-racle protocol is implemented as a collection of smart contracts written in Solidity, which execute on any EVM. There is also a rudimentary user interface for showing advertized Action Descriptions as well as voting on the correctness on the Action completions.
 
 ## Future Work
 
 ### Safeguards
 
-Malicious requests can be made by anyone, trustlessly, using economic incentives. The Do-racle protocol has no way of preventing such bad actors. Even if such safeguards exist, anyone could create a copy of the protocol with the safeguards removed. We believe such safeguards should be placed on the AI Agent side. Yet this topic is open for discussions that reach far beyond the scope of this prototype.
+Malicious requests can be made by anyone, trustlessly, using economic incentives. The DO-racle protocol has no way of preventing such bad actors. Even if such safeguards exist, anyone could create a copy of the protocol with the safeguards removed. We believe such safeguards should be placed on the AI Agent side. Yet this topic is open for discussions that reach far beyond the scope of this prototype.
