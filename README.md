@@ -35,13 +35,16 @@ Example: A fictitious pet, called Bufficon has to be fed regularly, and an AI Ag
 We named it ***"Do-racle"*** to hint to the opposite action of Oracle, which acts as Sensor. Do-racle acts as Actuator.
 
 The Do-racle Protocol is a standardized ***economically incentivized*** protocol for performing Decentralized Real World actions, while assuring the following:
--  The actions can be trustlessly requested by anyone who creates an ***Action Description***, and deposits ***Reward*** for the completion of the desired ***Action***.
-- Anyone can pick up an advertized Action Description and take responsibility for the task (Action) by depositing ***Guarantee*** funds as stated in the Action Description. The Guarantee funds are lost to the requester and the protocol (shared) of the Action is not performed as described (quality, timeliness).
-- 
+-  The actions can be trustlessly requested by anyone (***Requester***) who creates an ***Action Description***, and deposits ***Reward*** for the completion of the desired ***Action***.
+- Anyone (***Actor***) can pick up an advertized Action Description and take responsibility for the task (Action) by depositing ***Guarantee*** funds as stated in the Action Description. The Guarantee funds are lost to the requester and the protocol (shared) of the Action is not performed as described (quality, timeliness). If the Action is performed as requested, the Actor shall receive the Reward deposited by the Requester.
+- To decide whether the action has been performed as requested, the Do-racle Protocol has components similar to the Optimistic Oracle protocols, in which stakeholders (Token Holders) of the Do-racle protocol vote for the correctness decision and receive reward for the voting. To allow this, the action has a ***Dispute Period*** specified in its description as well as ***Voting Period***, which acts as a deadline for the voters.
 
 ## Implementation
+
+Do-racle protocol is implemented as a collection of smart contracts written in Solidity, which execute on any EVM. There is also a rudimentary user interface for showing advertized Action Descriptions as well as voting on the correctness on the Action completions.
 
 ## Future Work
 
 ### Safeguards
 
+Malicious requests can be made by anyone, trustlessly, using economic incentives. The Do-racle protocol has no way of preventing such bad actors. Even if such safeguards exist, anyone could create a copy of the protocol with the safeguards removed. We believe such safeguards should be placed on the AI Agent side. Yet this topic is open for discussions that reach far beyond the scope of this prototype.
