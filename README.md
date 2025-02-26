@@ -22,8 +22,9 @@ This is a decentralized economically incentivized on-chain actuator that can be 
 
 *** Highlighting the difference*** The main difference between an orcale and an optimistic oracle is the number of actors at each stage. In oracle many actors enter quantifiable data and the outliers are penalized. This is optimised to be fast as their typically is no voting period. Alternatively in optimistic oracles one actor enters a binary data, there is no continuous pricing or quantiability. There is a dispute period where any one person can challenge the entry. If disputed there is voting regarding this challenege of accuracy.
 
-| Oracle            | Quantifiable Data |
+| Protocol          | Property          |
 |-------------------|-------------------|
+| Oracle            | Quantifiable Data |
 | Optimistic Oracle | Boolean Data      |
 | DO-racle          | Boolean Action    |
 
