@@ -6,19 +6,27 @@
 
 This is a decentralized economically incentivized on-chain actuator that can be used by AI Agents to achieve their real world action objectives. It runs on Ethereum Virtual Machine (EVM). Agents with access to EVM keys can ask anyone for actions that they desire and offer reward for the execution of such actions. Anyone can deposit the required funds to accept the task, execute the desired action and receive the appropriate reward for the execution. If the action is not executed within a dispute period, the acceptance deposit is lost. Anyone can dispute the action correctness, and trigger voting similar to the one in Optimistic Oracles, such as UMA. The voting decides who is right and who shall receive the funds.
 
+![Diagram](./Diagram.jpg)
+
 ## Introduction
 
 ### Oracles and Optimistic Oracles
 
 ***Oracles*** are a way to enter off-chain data into the blockchain, which can then be read by various smart contracts. This gives the smart contracts access to the Real World information (Sensors). Oracles serve an important role in Decentralized Finance (DeFi).
 
+![OracleDiagram](./OracleDiagram.jpg)
+
 ***Optimistic Oracles*** (notably UMA), allow anyone to enter data into the blockchain (make an ***Assertion***) and make a deposit which vouches for the truthfulness of the Assertion. Anyone can ***Dispute*** this Assertion by depositing funds with the dispute claim. These funds are returned to the Disputer if the corresponding Assertion turns out to be false, in addition to the Asserter's deposit less a small fee imposed by the protocol. The Dispute has to be triggered within a Dispute Period and it has to be Voted on by the Optimistic Oracle stakeholders, which get rewarded for their voting.
+
+![OptimisticOracleDiagram](./OptimisticOracleDiagram.jpg)
 
 *** Highlighting the difference*** The main difference between an orcale and an optimistic oracle is the number of actors at each stage. In oracle many actors enter data and the outliers who's data is not within the median are "punished". This is optimised to be fast as their typically is no voting period. Alternatively in optimistic oracles one actor enters a binary result, there is no continuous pricing, and then there is a dispute period where any one person can challenge the entry. If disputed there is voting regarding the challenege.
 
 ### Actuators
 
 In DeFi, all or most actions are executed on-chain causing financial effect. However, Real World actions have to be performed by actuators. This is not a problem if the actuator is called by a single off-chain program and this program has deterministic behavior and is calling for known actions. The Actuators can be designed or integrated specifically for that deterministic program.
+
+![ActuatorDiagram](./ActuatorDiagram.jpg)
 
 For example, an Actuator for controlling a light switch may be developed and integrated with a program which reads on-chain state information when it receives on-chain events. This on-chain state tells the actuator whether to turn the light switch on or off.
 
@@ -40,6 +48,8 @@ The Do-racle Protocol is a standardized ***economically incentivized*** protocol
 -  The actions can be trustlessly requested by anyone (***Requester***) who creates an ***Action Description***, and deposits ***Reward*** for the completion of the desired ***Action***.
 - Anyone (***Actor***) can pick up an advertized Action Description and take responsibility for the task (Action) by depositing ***Guarantee*** funds as stated in the Action Description. The Guarantee funds are lost to the requester and the protocol (shared) of the Action is not performed as described (quality, timeliness). If the Action is performed as requested, the Actor shall receive the Reward deposited by the Requester.
 - To decide whether the action has been performed as requested, the Do-racle Protocol has components similar to the Optimistic Oracle protocols, in which stakeholders (Token Holders) of the Do-racle protocol vote for the correctness decision and receive reward for the voting. To allow this, the action has a ***Dispute Period*** specified in its description as well as ***Voting Period***, which acts as a deadline for the voters.
+
+![DoRacleDiagram](./DoRacleDiagram.jpg)
 
 ## Implementation
 
