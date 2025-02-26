@@ -14,6 +14,8 @@ This is a decentralized economically incentivized on-chain actuator that can be 
 
 ***Optimistic Oracles*** (notably UMA), allow anyone to enter data into the blockchain (make an ***Assertion***) and make a deposit which vouches for the truthfulness of the Assertion. Anyone can ***Dispute*** this Assertion by depositing funds with the dispute claim. These funds are returned to the Disputer if the corresponding Assertion turns out to be false, in addition to the Asserter's deposit less a small fee imposed by the protocol. The Dispute has to be triggered within a Dispute Period and it has to be Voted on by the Optimistic Oracle stakeholders, which get rewarded for their voting.
 
+*** Highlighting the difference*** The main difference between an orcale and an optimistic oracle is the number of actors at each stage. In oracle many actors enter data and the outliers who's data is not within the median are "punished". This is optimised to be fast as their typically is no voting period. Alternatively in optimistic oracles one actor enters a binary result, there is no continuous pricing, and then there is a dispute period where any one person can challenge the entry. If disputed there is voting regarding the challenege.
+
 ### Actuators
 
 In DeFi, all or most actions are executed on-chain causing financial effect. However, Real World actions have to be performed by actuators. This is not a problem if the actuator is called by a single off-chain program and this program has deterministic behavior and is calling for known actions. The Actuators can be designed or integrated specifically for that deterministic program.
