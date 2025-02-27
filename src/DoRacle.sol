@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 pragma solidity ^0.8.0;
 
-import "@openzeppelin/token/ERC20/extensions/IERC20Metadata.sol";
+import "./interfaces/IDoRacleToken.sol";
 
 contract DoRacle {
     struct Action {
@@ -22,7 +22,9 @@ contract DoRacle {
     address public owner;
     address public tokenAddress;
     Action[] public actions;
-    mapping(uint256 => mapping(address => bool)) public votes;
+    mapping(uint256 => mapping(address => uint8)) public votes; // actionId => voter => executed
+
+    uint256 public constant VOTE_REWARD = 1;
 
     event ActionRequested(uint256 actionId, string description);
     event Voted(uint256 actionId, address voter);
@@ -62,7 +64,7 @@ contract DoRacle {
         }));
 
         // Make reward payment to this contract
-        (IERC20Metadata(tokenAddress)).transferFrom(msg.sender, address(this), _reward);
+        (IDoRacleToken(tokenAddress)).transferFrom(msg.sender, address(this), _reward);
 
         emit ActionRequested(actions.length - 1, _description);
     }
@@ -71,9 +73,13 @@ contract DoRacle {
         require(_actionId < actions.length, "Action does not exist");
         require(actions[_actionId].disputer != address(0), "Action not disputed");
         require(block.timestamp < actions[_actionId].voteDeadline, "Vote deadline passed");
-        require(!votes[_actionId][msg.sender], "Already voted");
+        require((IDoRacleToken(tokenAddress)).balanceOf(msg.sender) > 0, "No balance to vote");
+        require(votes[_actionId][msg.sender] != 0, "Already voted");
 
-        votes[_actionId][msg.sender] = true;
+        // Deposit to vote
+        (IDoRacleToken(tokenAddress)).transferFrom(msg.sender, address(this), VOTE_REWARD);
+
+        votes[_actionId][msg.sender] = executed ? 1 : 2;
         actions[_actionId].voteCount += 1;
         if (executed) {
             actions[_actionId].votesExecuted += 1;
@@ -89,6 +95,18 @@ contract DoRacle {
         return actions[_actionId].votesExecuted > actions[_actionId].voteCount / 2;
     }
 
+    function claimVoterReward(uint256 _actionId) public {
+        require(_actionId < actions.length, "Action does not exist");
+        require(votes[_actionId][msg.sender] != 0, "Voter did not vote");
+
+        if (voteResult(_actionId) && votes[_actionId][msg.sender] == 2 || !voteResult(_actionId) && votes[_actionId][msg.sender] == 1) {
+            // Make reward payment to voter
+            (IDoRacleToken(tokenAddress)).mint(VOTE_REWARD); // Via inflation
+            (IDoRacleToken(tokenAddress)).transfer(msg.sender, VOTE_REWARD * 2);
+        } // Otherise no reward and no voting depsit returned
+        votes[_actionId][msg.sender] = 0; // Reset vote
+    }
+
     function takeAction(uint256 _actionId) public onlyOwner {
         require(_actionId < actions.length, "Action does not exist");
         require(actions[_actionId].executor == address(0), "Action already taken");
@@ -96,7 +114,7 @@ contract DoRacle {
         require(block.timestamp < actions[_actionId].executeDeadline, "Execute deadline passed");
 
         // Make guarantee payment to this contract
-        (IERC20Metadata(tokenAddress)).transferFrom(msg.sender, address(this), actions[_actionId].guarantee);
+        (IDoRacleToken(tokenAddress)).transferFrom(msg.sender, address(this), actions[_actionId].guarantee);
 
         emit ActionTaken(_actionId);
     }
@@ -120,7 +138,7 @@ contract DoRacle {
         actions[_actionId].disputer = msg.sender;
 
         // Make dispute payment to this contract (same as guarantee)
-        (IERC20Metadata(tokenAddress)).transferFrom(msg.sender, address(this), actions[_actionId].guarantee);
+        (IDoRacleToken(tokenAddress)).transferFrom(msg.sender, address(this), actions[_actionId].guarantee);
 
         emit ActionDisputed(_actionId);
     }
@@ -132,14 +150,14 @@ contract DoRacle {
         if (actions[_actionId].disputer != address(0)) {
             if (voteResult(_actionId)) {
                 // Make reward payment to executor and return guarantee
-                (IERC20Metadata(tokenAddress)).transfer(actions[_actionId].executor, actions[_actionId].reward + actions[_actionId].guarantee);
+                (IDoRacleToken(tokenAddress)).transfer(actions[_actionId].executor, actions[_actionId].reward + actions[_actionId].guarantee);
             } else {
                 // Make reward payment to disputer and return guarantee
-                (IERC20Metadata(tokenAddress)).transfer(actions[_actionId].disputer, actions[_actionId].reward + actions[_actionId].guarantee);
+                (IDoRacleToken(tokenAddress)).transfer(actions[_actionId].disputer, actions[_actionId].reward + actions[_actionId].guarantee);
             }
         } else {
             // Make reward payment to executor and return guarantee
-            (IERC20Metadata(tokenAddress)).transfer(actions[_actionId].executor, actions[_actionId].reward + actions[_actionId].guarantee);
+            (IDoRacleToken(tokenAddress)).transfer(actions[_actionId].executor, actions[_actionId].reward + actions[_actionId].guarantee);
         }
 
         emit ActionExecuted(_actionId);

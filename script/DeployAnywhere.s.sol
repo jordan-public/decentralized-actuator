@@ -18,6 +18,7 @@ contract Deploy is Script {
 
         token = new DoRacleToken();
         protocol = new DoRacle(address(token));
+        token.setProtocol(address(protocol));
 
         console.log("Creator (owner): ", msg.sender);
         console.log("DoRacleToken: ", address(token));

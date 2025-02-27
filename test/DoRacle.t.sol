@@ -12,6 +12,7 @@ contract DoRacleTest is Test {
     function setUp() public {
         token = new DoRacleToken();
         protocol = new DoRacle(address(token));
+        token.setProtocol(address(protocol));
     }
 
     function test_Nothing() public {
