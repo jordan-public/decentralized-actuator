@@ -4,6 +4,7 @@
     "incentivized",
     "racle",
     "trustlessly",
+    "Unichain",
     "Zircuit"
   ],
   "solidity.packageDefaultDependenciesContractsDirectory": "src",
