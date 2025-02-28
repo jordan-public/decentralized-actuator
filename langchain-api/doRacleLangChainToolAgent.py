@@ -25,7 +25,7 @@ class ActionTool(BaseTool):
 llm = OpenAI(temperature=0)
 
 # Create an agent with your custom tool.
-tools = [GreetTool()]
+tools = [ActionTool()]
 agent = initialize_agent(tools, llm, model_name="gpt-4o-mini", agent="zero-shot-react-description", verbose=True)
 
 response = agent.run("Perform the action of feeding the Bufficon")
