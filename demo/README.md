@@ -8,9 +8,9 @@ The video can be found [here](./video.mp3) and on [YouTube](https://youtube.com)
 
 ### Hedera:
 
-DoRacle: 0x907894aC9385B230672E475670B3719FcBedE91b ?
+DoRacle: 0xE28C059f74e0044C01bD06e9B0A2642D5d1717e6
 
-DoRacleToken: 0x05dFC93818f4BB2FE68903925BdAA0D0218157cd ?
+DoRacleToken: 0x0888091227379c6e5719859F7A39024edA454E20
 
 ### Flow Testnet:
 
