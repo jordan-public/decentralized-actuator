@@ -57,6 +57,10 @@ The DO-racle Protocol is a standardized ***economically incentivized*** protocol
 
 ![DOracleDiagram](./DOracleDiagram.jpg)
 
+The interactions are as follows:
+
+![InteractionDiagram](./InteractionDiagram.jpg)
+
 ## Implementation
 
 DO-racle protocol is implemented as a collection of smart contracts written in Solidity, which execute on any EVM. 
