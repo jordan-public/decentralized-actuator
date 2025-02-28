@@ -3,21 +3,16 @@ pragma solidity ^0.8.0;
 
 import "./interfaces/IDoRacleToken.sol";
 import "./types/TAction.sol";
+import "./interfaces/IDoRacle.sol";
 import "forge-std/Console.sol";
 
-contract DoRacle {
+contract DoRacle is IDoRacle{
     address public owner;
     address public tokenAddress;
     TAction[] public actions;
     mapping(uint256 => mapping(address => uint8)) public votes; // actionId => voter => executed
 
     uint256 public constant VOTE_REWARD = 1 ether;
-
-    event ActionRequested(uint256 actionId, string description);
-    event Voted(uint256 actionId, address voter);
-    event ActionTaken(uint256 actionId);
-    event ActionExecuted(uint256 actionId);
-    event ActionDisputed(uint256 actionId);
 
     modifier onlyOwner() {
         require(msg.sender == owner, "Only owner can execute this");
@@ -116,7 +111,7 @@ contract DoRacle {
 
         actions[_actionId].executedTimestamp = block.timestamp;
 
-        emit ActionTaken(_actionId);
+        emit ActionExecuted(_actionId);
     }
 
     function disputeAction(uint256 _actionId) public {

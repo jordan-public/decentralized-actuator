@@ -3,7 +3,8 @@
     "Bufficon",
     "incentivized",
     "racle",
-    "trustlessly"
+    "trustlessly",
+    "Zircuit"
   ],
   "solidity.packageDefaultDependenciesContractsDirectory": "src",
   "solidity.packageDefaultDependenciesDirectory": "lib"
