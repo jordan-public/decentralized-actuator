@@ -11,7 +11,7 @@ contract DoRacle {
     TAction[] public actions;
     mapping(uint256 => mapping(address => uint8)) public votes; // actionId => voter => executed
 
-    uint256 public constant VOTE_REWARD = 1;
+    uint256 public constant VOTE_REWARD = 1 ether;
 
     event ActionRequested(uint256 actionId, string description);
     event Voted(uint256 actionId, address voter);

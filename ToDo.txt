@@ -1,6 +1,5 @@
 To do:
 - Create calling sequence diagram
-- Create command line for creating requests
 - Create front end for taking tasks, and executing them.
     - List tasks + 
         - take task button optional

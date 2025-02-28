@@ -18,8 +18,8 @@ contract DoRacleTest is Test {
     address constant VOTER2 = 0x605E1E9EB58547Ff88598C4079D7B477c79cB546;
     address constant VOTER3 = 0xdA9c29211C50013CFfb277626d03B05297778921;
 
-    uint256 constant REWARD = 100;
-    uint256 constant GUARANTEE = 10;
+    uint256 constant REWARD = 100 ether;
+    uint256 constant GUARANTEE = 10 ether;
 
     function setUp() public {
         token = new DoRacleToken();
