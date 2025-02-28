@@ -1,5 +1,7 @@
 To do:
 - Create calling sequence diagram
+- Create presentation
+- Create and upload video
 - Create front end for taking tasks, and executing them.
     - List tasks + 
         - take task button optional
@@ -10,12 +12,10 @@ To do:
     - not needed add task (agents do this)
 - Add voting front end (time permitting).
 - Add "not to do" items below in "future work section of README.md".
-- Create LangChain plugin for Actuator Do-racle interface.
-    - Use command line if web3.py still has issues
-- Create demo video.
-- Deploy to multiple EVM blockchains.
+- Create native web3.py LangChain plugin for Actuator Do-racle interface
+- Deploy Hedera Testnet: check on issue with 295 Thirdweb / Hedera
 - Apply for sponsor prizes. Prepare to pitch to non-sponsors and non-eligible sponsors as well.
-- Create sample AI Agent (time permitting).
+- Make QR code stickers with project URL
 
 Not to do (for hackathon prototype):
 - Protocol ownership tokens.
