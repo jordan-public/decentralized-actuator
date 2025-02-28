@@ -2,6 +2,13 @@ To do:
 - Create calling sequence diagram
 - Create command line for creating requests
 - Create front end for taking tasks, and executing them.
+    - List tasks + 
+        - take task button optional
+        - execute task button optional
+        - vote on task optional
+        - settle tsk optional
+        - claim reward button optional
+    - not needed add task (agents do this)
 - Add voting front end (time permitting).
 - Add "not to do" items below in "future work section of README.md".
 - Create LangChain plugin for Actuator Do-racle interface.
