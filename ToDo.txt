@@ -1,12 +1,10 @@
 To do:
-- Create the Solidity contracts based on the description we designed. 
-- Create Solidity tests.
-- Create contract deployment scripts that contain sample execution.
+- Create command line for creating requests
 - Create front end for taking tasks, and executing them.
-- Add voting to contracts (time permitting).
 - Add voting front end (time permitting).
 - Add "not to do" items below in "future work section of README.md".
 - Create LangChain plugin for Actuator Do-racle interface.
+    - Use command line if web3.py still has issues
 - Create demo video.
 - Deploy to multiple EVM blockchains.
 - Apply for sponsor prizes. Prepare to pitch to non-sponsors and non-eligible sponsors as well.
