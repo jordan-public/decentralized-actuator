@@ -59,7 +59,13 @@ The DO-racle Protocol is a standardized ***economically incentivized*** protocol
 
 ## Implementation
 
-DO-racle protocol is implemented as a collection of smart contracts written in Solidity, which execute on any EVM. There is also a rudimentary user interface for showing advertized Action Descriptions as well as voting on the correctness on the Action completions.
+DO-racle protocol is implemented as a collection of smart contracts written in Solidity, which execute on any EVM. 
+
+There is also a rudimentary user interface written in JavaScript/React for showing advertized Action Descriptions as well as voting on the correctness on the Action completions.
+
+The Agent interface is written in Python/LangChain and it is architected as a LangChain Tool.
+
+There are a few command-line ZSH utilities for scripting automation of usage of the Action Execution, as well as configuration and setup.
 
 ## Future Work
 
