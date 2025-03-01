@@ -2,7 +2,7 @@
 
 ## Video
 
-The video can be found [here](https://youtu.be/Ut5rSXBVCHc) and on [YouTube](https://youtube.com).
+The video can be found [here](./Do-racle.mov) and on [YouTube](https://youtu.be/Ut5rSXBVCHc).
 
 ## Contract deployment addresses
 
