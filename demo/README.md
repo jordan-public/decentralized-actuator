@@ -1,8 +1,44 @@
 # Demo Video and Deployment Addresses
 
-## Video
+## Demo Video
 
-The video can be found [here](./Do-racle.mov) and on [YouTube](https://youtu.be/Ut5rSXBVCHc).
+The demo video can be found [here](./Do-racle.mov) and on [YouTube](https://youtu.be/Ut5rSXBVCHc).
+
+## How to run
+
+To install and run the DoRacle protocol, clone this repo and in it:
+
+- Copy the .env files:
+```
+cp .env.sample .env
+cp langchain-api/.env.sample langchain-api/.env
+```
+ and fill in the appropriate private data in them.
+
+ - If running locally start Anvil in one ZSH terminal and deploy the contracts locally in another:
+ ```
+ ./Anvil.sh
+ ```
+
+ ```
+ ./deployAnvil.sh
+```
+
+- In a third terminal install and run the front end:
+```
+cd web
+pnpm install
+pnpm dev
+```
+and visit the URL ```http://localhost:3000``` with a browser with MetaMask wallet extension installed.
+
+- Run the sample AI Agent which uses our LangChain Tool and OpenAI in a fourth terminal:
+```
+cd langchain-api
+./testDoRacleAgent.sh
+```
+
+The AI Agent should create Do-racle Actions which can be taken, executed and otherwise managed in the browser opened in the step above.
 
 ## Contract deployment addresses
 

@@ -2,6 +2,8 @@
 
 # Do-racle: Decentralized Trustless Universal Actuator for Real World AI Agents
 
+Demo video, running instructions and contract deployment addresses can be found [here](./demo/README.md).
+
 ## Abstract
 
 This is a decentralized economically incentivized on-chain actuator that can be used by AI Agents to achieve their real world action objectives. It runs on Ethereum Virtual Machine (EVM). Agents with access to EVM keys can ask anyone for actions that they desire and offer reward for the execution of such actions. Anyone can deposit the required funds to accept the task, execute the desired action and receive the appropriate reward for the execution. If the action is not executed within a dispute period, the acceptance deposit is lost. Anyone can dispute the action correctness, and trigger voting similar to the one in Optimistic Oracles, such as UMA. The voting decides who is right and who shall receive the funds.
