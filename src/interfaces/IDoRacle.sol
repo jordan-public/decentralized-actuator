@@ -18,7 +18,7 @@ interface IDoRacle {
     function disputeAction(uint256 _actionId) external;
     function settleAction(uint256 _actionId) external;
     function getAction(uint256 _actionId) external view returns (TAction memory);
-    function getActionsCount() external view returns (uint256);
+    function getActionCount() external view returns (uint256);
 
     event ActionRequested(uint256 actionId, string description);
     event Voted(uint256 actionId, address voter);

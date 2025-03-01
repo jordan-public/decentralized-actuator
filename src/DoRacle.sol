@@ -163,7 +163,7 @@ contract DoRacle is IDoRacle{
         return actions[_actionId];
     }
 
-    function getActionsCount() public view returns (uint256) {
+    function getActionCount() public view returns (uint256) {
         return actions.length;
     }
 }

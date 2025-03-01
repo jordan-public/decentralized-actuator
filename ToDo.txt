@@ -13,7 +13,6 @@ To do:
 - Add voting front end (time permitting).
 - Add "not to do" items below in "future work section of README.md".
 - Create native web3.py LangChain plugin for Actuator Do-racle interface
-- Deploy Hedera Testnet: check on issue with 295 Thirdweb / Hedera
 - Apply for sponsor prizes. Prepare to pitch to non-sponsors and non-eligible sponsors as well.
 - Make QR code stickers with project URL
 

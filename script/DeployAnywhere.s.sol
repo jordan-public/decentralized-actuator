@@ -24,6 +24,8 @@ contract Deploy is Script {
         console.log("DoRacleToken: ", address(token));
         console.log("DoRacle: ", address(protocol));
 
+        token.mint(1000 ether);
+
         vm.stopBroadcast();
     }
 }

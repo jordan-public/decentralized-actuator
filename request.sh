@@ -1,9 +1,7 @@
 #!/bin/zsh
 
 # If deployed not locally, use this:
-# . ./.env
-# Otherwise, use this:
-PRIVATE_KEY="0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
+. ../.env
 
 # Check if the correct number of arguments is provided
 if [ "$#" -ne 1 ]; then
@@ -17,8 +15,8 @@ RPC_URL="http://127.0.0.1:8545/"
 # from .env: 
 # PRIVATE_KEY=$2
 # From deployAnvil first contract is always:
-CONTRACT_ADDRESS="0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
-TOKEN_CONTRACT_ADDRESS="0x5FbDB2315678afecb367f032d93F642f64180aa3"
+CONTRACT_ADDRESS="0xE71C57852392123BbE527A16271D2E6395c66e8b"
+TOKEN_CONTRACT_ADDRESS="0xE53F8E8a492e85E87AE553AcFb676cEfF50740A6"
 DESCRIPTION=$1
 REWARD="100000000000000000000"
 GUARANTEE="10000000000000000000"
