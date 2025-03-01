@@ -55,11 +55,11 @@ The DO-racle Protocol is a standardized ***economically incentivized*** protocol
 - Anyone (***Actor***) can pick up an advertized Action Description and take responsibility for the task (Action) by depositing ***Guarantee*** funds as stated in the Action Description. The Guarantee funds are lost to the requester and the protocol (shared) of the Action is not performed as described (quality, timeliness). If the Action is performed as requested, the Actor shall receive the Reward deposited by the Requester.
 - To decide whether the action has been performed as requested, the Do-racle Protocol has components similar to the Optimistic Oracle protocols, in which stakeholders (Token Holders) of the DO-racle protocol vote for the correctness decision and receive reward for the voting. To allow this, the action has a ***Dispute Period*** specified in its description as well as ***Voting Period***, which acts as a deadline for the voters.
 
-![DOracleDiagram](./DoracleDiagram.jpg)
+![DoracleDiagram](./DOracleDiagram.jpg)
 
 The interactions are as follows:
 
-![InteractionDiagram](./InteractionDiagram.jpg)
+![InteractionDiagram](./interactionDiagram.jpg)
 
 ## Implementation
 
