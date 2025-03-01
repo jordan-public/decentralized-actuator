@@ -1,11 +1,5 @@
 To do:
-- Create presentation
-- Create and upload video
-- Add "not to do" items below in "future work section of README.md".
 - Create native web3.py LangChain plugin for Actuator Do-racle interface
 - Apply for sponsor prizes. Prepare to pitch to non-sponsors and non-eligible sponsors as well.
 - Make QR code stickers with project URL
 
-Not to do (for hackathon prototype):
-- Protocol ownership tokens.
-- Token distribution to voters.
