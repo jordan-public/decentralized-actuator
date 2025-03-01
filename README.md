@@ -6,7 +6,7 @@ Demo video, running instructions and contract deployment addresses can be found 
 
 ## Abstract
 
-This is a decentralized economically incentivized on-chain actuator that can be used by AI Agents to achieve their real world action objectives. It runs on Ethereum Virtual Machine (EVM). Agents with access to EVM keys can ask anyone for actions that they desire and offer reward for the execution of such actions. Anyone can deposit the required funds to accept the task, execute the desired action and receive the appropriate reward for the execution. If the action is not executed within a dispute period, the acceptance deposit is lost. Anyone can dispute the action correctness, and trigger voting similar to the one in Optimistic Oracles, such as UMA. The voting decides who is right and who shall receive the funds.
+We built a decentralized economically incentivized on-chain actuator that can be used by AI Agents to achieve their real world action objectives. It runs on Ethereum Virtual Machine (EVM) and LangChain AI Agents using our Tools. Agents with access to EVM keys can ask anyone for Actions that they desire and offer reward for the Execution of such Actions. Anyone can deposit the required funds to accept the task, execute the desired Action and receive the appropriate reward for the Execution. If the action is not executed within a Dispute period, the acceptance deposit is lost. Anyone can Dispute the Action correctness, and trigger Voting similar to the one in Optimistic Oracles, such as UMA. The voting decides who is right and who shall receive the deposited funds or get slashed.
 
 ![Diagram](./Diagram.jpg)
 
@@ -78,3 +78,7 @@ There are a few command-line ZSH utilities for scripting automation of usage of 
 ### Safeguards
 
 Malicious requests can be made by anyone, trustlessly, using economic incentives. The DO-racle protocol has no way of preventing such bad actors. Even if such safeguards exist, anyone could create a copy of the protocol with the safeguards removed. We believe such safeguards should be placed on the AI Agent side. Yet this topic is open for discussions that reach far beyond the scope of this prototype.
+
+## Reputation System
+
+A reputation system can be built based on previous history for each address creating and taking Do-racle Actions. This could add to the reliability of the advertized Actions.
