@@ -78,3 +78,15 @@ DoRacle: 0xE71C57852392123BbE527A16271D2E6395c66e8b
 
 DoRacleToken: 0xE53F8E8a492e85E87AE553AcFb676cEfF50740A6
 
+### U2U Nebulas Testnet:
+
+DoRacle: Error: invalid opcode: opcode 0x5f not defined
+
+DoRacleToken: Error: invalid opcode: opcode 0x5f not defined
+
+### zkSync Sepolia:
+
+DoRacle: Error code 3: Failed to serialize transaction: toAddressIsNull
+
+DoRacleToken: Error code 3: Failed to serialize transaction: toAddressIsNull
+
