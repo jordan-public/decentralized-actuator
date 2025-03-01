@@ -2,7 +2,7 @@
 
 ## Video
 
-The video can be found [here]((https://youtu.be/Ut5rSXBVCHc)) and on [YouTube](https://youtube.com).
+The video can be found [here](https://youtu.be/Ut5rSXBVCHc) and on [YouTube](https://youtube.com).
 
 ## Contract deployment addresses
 
