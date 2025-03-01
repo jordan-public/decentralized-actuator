@@ -1,16 +1,6 @@
 To do:
-- Create calling sequence diagram
 - Create presentation
 - Create and upload video
-- Create front end for taking tasks, and executing them.
-    - List tasks + 
-        - take task button optional
-        - execute task button optional
-        - vote on task optional
-        - settle tsk optional
-        - claim reward button optional
-    - not needed add task (agents do this)
-- Add voting front end (time permitting).
 - Add "not to do" items below in "future work section of README.md".
 - Create native web3.py LangChain plugin for Actuator Do-racle interface
 - Apply for sponsor prizes. Prepare to pitch to non-sponsors and non-eligible sponsors as well.
