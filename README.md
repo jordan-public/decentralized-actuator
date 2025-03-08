@@ -1,6 +1,6 @@
 [This project](https://devfolio.co/projects/doracle-4b9e) won the following prize at the [ETHDenver 2025](https://ethdenver2025.devfolio.co/overview) Buidlathon:
 
-<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.243 11.757l5.25-4.886a1.3 1.3 0 00.144-1.745l-1.247-1.62A1.3 1.3 0 0019.36 3H5m7 7l3-3m-3 3L9 7m3 3a6 6 0 100 12 6 6 0 000-12zm3-3H9m6 0l4-4M5 3a1.3 1.3 0 00-1.03.507L2.7 5.154a1.3 1.3 0 00.117 1.718l4.94 4.885M5 3l4 4" stroke="currentColor" stroke-width="1.5"></path></svg> [U2U Network: Second Prize: Building RWA products on U2U Network</a>](https://ethdenver2025.devfolio.co/projects?prizes=9c4deca78ff54180b69d7c0934c18f92&show_winners=false)
+![prizeicon](./prizeicon.svg) [U2U Network: Second Prize: Building RWA products on U2U Network</a>](https://ethdenver2025.devfolio.co/projects?prizes=9c4deca78ff54180b69d7c0934c18f92&show_winners=false)
 
 # Do-racle: Decentralized Trustless Universal Actuator for Real World AI Agents
 
